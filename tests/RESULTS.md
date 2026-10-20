@@ -1,11 +1,11 @@
 # Test results
 
-Date: 2026-10-20T03:16:07Z
+Date: 2026-10-20T04:06:01Z
 
 ## Tool versions
 
 ```
-date 2026-10-20T03:15:49Z
+date 2026-10-20T04:05:43Z
 docker client 26.1.5+dfsg1 server 26.1.5+dfsg1
 Docker Compose version v2.29.7
 Python 3.13.5
@@ -71,13 +71,13 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /workspace/products/compose-templates/lite/01-nginx-https/www
+        source: /tmp/u_compose-templates-lite/01-nginx-https/www
         target: /usr/share/nginx/html
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: /workspace/products/compose-templates/lite/01-nginx-https/backend/default.conf
+        source: /tmp/u_compose-templates-lite/01-nginx-https/backend/default.conf
         target: /etc/nginx/conf.d/default.conf
         read_only: true
         bind:
@@ -108,13 +108,13 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /workspace/products/compose-templates/lite/01-nginx-https/nginx/nginx.conf.template
+        source: /tmp/u_compose-templates-lite/01-nginx-https/nginx/nginx.conf.template
         target: /etc/nginx/templates/nginx.conf.template
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: /workspace/products/compose-templates/lite/01-nginx-https/certs
+        source: /tmp/u_compose-templates-lite/01-nginx-https/certs
         target: /etc/nginx/certs
         read_only: true
         bind:
@@ -161,13 +161,13 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /workspace/products/compose-templates/lite/01-nginx-https/www
+        source: /tmp/u_compose-templates-lite/01-nginx-https/www
         target: /usr/share/nginx/html
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: /workspace/products/compose-templates/lite/01-nginx-https/backend/default.conf
+        source: /tmp/u_compose-templates-lite/01-nginx-https/backend/default.conf
         target: /etc/nginx/conf.d/default.conf
         read_only: true
         bind:
@@ -191,7 +191,7 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /workspace/products/compose-templates/lite/01-nginx-https/scripts/renew-loop.sh
+        source: /tmp/u_compose-templates-lite/01-nginx-https/scripts/renew-loop.sh
         target: /scripts/renew-loop.sh
         read_only: true
         bind:
@@ -201,12 +201,12 @@ services:
         target: /var/www/certbot
         volume: {}
       - type: bind
-        source: /workspace/products/compose-templates/lite/01-nginx-https/letsencrypt
+        source: /tmp/u_compose-templates-lite/01-nginx-https/letsencrypt
         target: /etc/letsencrypt
         bind:
           create_host_path: true
       - type: bind
-        source: /workspace/products/compose-templates/lite/01-nginx-https/certs
+        source: /tmp/u_compose-templates-lite/01-nginx-https/certs
         target: /certs
         bind:
           create_host_path: true
@@ -236,13 +236,13 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /workspace/products/compose-templates/lite/01-nginx-https/nginx/nginx.conf.template
+        source: /tmp/u_compose-templates-lite/01-nginx-https/nginx/nginx.conf.template
         target: /etc/nginx/templates/nginx.conf.template
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: /workspace/products/compose-templates/lite/01-nginx-https/certs
+        source: /tmp/u_compose-templates-lite/01-nginx-https/certs
         target: /etc/nginx/certs
         read_only: true
         bind:
@@ -281,18 +281,18 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /workspace/products/compose-templates/lite/02-postgres/backups
+        source: /tmp/u_compose-templates-lite/02-postgres/backups
         target: /backups
         bind:
           create_host_path: true
       - type: bind
-        source: /workspace/products/compose-templates/lite/02-postgres/scripts/backup-once.sh
+        source: /tmp/u_compose-templates-lite/02-postgres/scripts/backup-once.sh
         target: /scripts/backup-once.sh
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: /workspace/products/compose-templates/lite/02-postgres/scripts/backup-loop.sh
+        source: /tmp/u_compose-templates-lite/02-postgres/scripts/backup-loop.sh
         target: /scripts/backup-loop.sh
         read_only: true
         bind:
@@ -325,7 +325,7 @@ services:
         target: /var/lib/postgresql/data
         volume: {}
       - type: bind
-        source: /workspace/products/compose-templates/lite/02-postgres/initdb
+        source: /tmp/u_compose-templates-lite/02-postgres/initdb
         target: /docker-entrypoint-initdb.d
         read_only: true
         bind:
@@ -340,10 +340,10 @@ volumes:
 ===== shellcheck =====
  Volume ct-nginx-https_webroot  Removing
  Volume ct-nginx-https_webroot  Removed
-make[1]: Entering directory '/workspace/products/compose-templates/lite'
+make[1]: Entering directory '/tmp/u_compose-templates-lite'
 ./demo.sh
-.....+.+++++++++++++++++++++++++++++++++++++++*.......+.....+...+....+...+...+........+.......+........+................+.....+.+.........+.....+.+..............+.+...+++++++++++++++++++++++++++++++++++++++*.....+.+...+..+....+.....+....+......+......+...+..+...+......+.......+...+.........+......+.....+.+....................+...+......+............+...+.......+..+.+..+.......+......+..+....+...+...+...+..+............+.+.....+......+.+........++++++
-...+......+........+.+..+....+...+..+..........+...........+.........+++++++++++++++++++++++++++++++++++++++*...+....+++++++++++++++++++++++++++++++++++++++*..+.....+...+...+.......+.....+.............+......+.........+..+...+....+..+.............+...+...+..+...+....+......+.................+............+...+....+.....+...+.+......+.....+...+......+....+...+..+..........+..+.........+....+........+.........+...+.+..+..........+.........+.....+............................+..+.+.........+......+.....+.........+......+.............+......+...+........+.......+..+.+........+...............+...............+.+..............+...................+.....+......+..........+.....+.+.....+.+..+.+...............++++++
+..+.....+.+.....+......+....+.....+.+++++++++++++++++++++++++++++++++++++++*..+.......+........+...+....+++++++++++++++++++++++++++++++++++++++*.....+........+.+.....+................+.....+...+....+........+............+.+......+........+.+..+.........+.+..+.......+.........+.........+..+.........+...............+.......+.....+....+...+......+..+...............+..........+........+.......+..+..........+...+........+.......+........+.........+...+....+.........+......+...........+.......+.....+.+............+........+.+...+.....+...+.......+...+...+..+.........+....+..+.........+.........+...................+...+..+............+......+....+...+...+..++++++
+...........+...+...+...............+....+..+.............+..+....+..+.......+++++++++++++++++++++++++++++++++++++++*.+...+...+...+...........+++++++++++++++++++++++++++++++++++++++*...+....+...+...+...............+......+...+........+....+......+...+......+...+..+.+..+......+.+.........+......+...............+..............+....+.....+...+............+.....................+.+.....+...+.............+...+............+..+...+...+.+......+.....+...................+.....+....+.....+.+...+.....+...+..............................+....+......+........+.+.........+..+...+......+.+...+..+.......+...........+.+...+........+...+......+..........+......+.................+...+...+.+...+..+.+.....+.........+...+...............+...+.............+......+..............+.+......+........+......+.+..+.............+...............+..+..........+........+....+........+.+......+..............+.........+...+....+...+........+.......+..+.+.....++++++
 -----
 wrote certs/fullchain.pem and certs/privkey.pem
  Network ct-nginx-https_default  Creating
@@ -377,7 +377,7 @@ curl: (35) Send failure: Broken pipe
 
 Demo is up at https://localhost:8443
 Stop it with: make demo-down
-make[1]: Leaving directory '/workspace/products/compose-templates/lite'
+make[1]: Leaving directory '/tmp/u_compose-templates-lite'
  Container ct-nginx-https-nginx-1  Stopping
  Container ct-nginx-https-nginx-1  Stopped
  Container ct-nginx-https-nginx-1  Removing
@@ -387,8 +387,8 @@ make[1]: Leaving directory '/workspace/products/compose-templates/lite'
  Container ct-nginx-https-backend-1  Removing
  Container ct-nginx-https-backend-1  Removed
  Volume ct-nginx-https_webroot  Removing
- Volume ct-nginx-https_webroot  Removed
  Network ct-nginx-https_default  Removing
+ Volume ct-nginx-https_webroot  Removed
  Network ct-nginx-https_default  Removed
  Volume ct-postgres_pgdata  Removing
  Volume ct-postgres_pgdata  Removed
@@ -409,8 +409,8 @@ make[1]: Leaving directory '/workspace/products/compose-templates/lite'
  Container ct-postgres-backup-1  Starting
  Container ct-postgres-backup-1  Started
 /var/run/postgresql:5432 - accepting connections
-backup wrote /backups/app-20261020T031606Z.dump
-dump file app-20261020T031606Z.dump size 1607
+backup wrote /backups/app-20261020T040600Z.dump
+dump file app-20261020T040600Z.dump size 1607
  Container ct-postgres-backup-1  Stopping
  Container ct-postgres-backup-1  Stopped
  Container ct-postgres-backup-1  Removing

@@ -86,7 +86,7 @@ Only in the full version:
 - `GUMROAD_LISTING.md`
 - `.github/workflows/compose-config.yml`
 
-Full version: GUMROAD_URL
+Full version: https://caoyadong.gumroad.com/l/umaus
 
 The $9 n8n DevOps Automation Pack is a separate product: https://caoyadong.gumroad.com/l/yvmcqj
 
@@ -175,6 +175,6 @@ Download is instant after payment. Setup on your own machine is about 15–30 mi
 - `GUMROAD_LISTING.md`
 - `.github/workflows/compose-config.yml`
 
-完整版：GUMROAD_URL
+完整版：https://caoyadong.gumroad.com/l/umaus
 
 9 美元的 n8n DevOps Automation Pack 是另一个产品：https://caoyadong.gumroad.com/l/yvmcqj
