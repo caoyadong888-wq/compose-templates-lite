@@ -49,11 +49,18 @@ or
 - `demo.sh` and `Makefile`
 - `tests/run_tests.sh` and the `tests/RESULTS.md` it writes
 - `screenshots/` PNG captures of real demo and backup command output
+- `.gitignore`
 - `LICENSE.txt` (MIT)
 
 ## Estimated setup time / 预计部署时间
 
 About 15 minutes to run the demo on a machine that already has Docker. About 30 minutes to copy a template, change the published ports, and replace the example password and domain.
+
+## 预计交付时间 / Estimated delivery time
+
+Download is instant after payment. Setup on your own machine is about 15–30 minutes: about 15 minutes to run the demo when Docker is already installed, and about 30 minutes to copy a template, change the published ports, and replace the example password and domain. A custom setup service, if you order one, takes 1–2 business days.
+
+付款后立即下载。自行部署大约 15–30 分钟。如果需要代为部署，定制服务为 1–2 个工作日。
 
 ## Requirements
 
@@ -76,6 +83,7 @@ Only in the full version:
 - `04-app-stack` — whoami behind nginx, plus Postgres 16
 - `CHANGELOG.md`
 - `marketing/` — listing copy, `make_images.py`, `cover.png`, `thumb.png`
+- `GUMROAD_LISTING.md`
 - `.github/workflows/compose-config.yml`
 
 Full version: GUMROAD_URL
@@ -123,18 +131,25 @@ make demo
 ./demo.sh
 ```
 
-### Deliverables / 交付物清单
+### 交付物清单 / Deliverables
 
 - `01-nginx-https/`：nginx 反向代理、自签演示、Certbot webroot profile、申请和续期脚本
 - `02-postgres/`：Postgres 16、健康检查、每日备份边车、保留策略、`scripts/restore.sh`
 - `demo.sh` 和 `Makefile`
 - `tests/run_tests.sh`，以及它写出的 `tests/RESULTS.md`
 - `screenshots/`：演示和备份命令的真实输出截图
+- `.gitignore`
 - `LICENSE.txt`（MIT）
 
 ### Estimated setup time / 预计部署时间
 
 已安装 Docker 时，演示大约 15 分钟。复制模板、改端口、换掉示例口令和域名，大约 30 分钟。
+
+### 预计交付时间 / Estimated delivery time
+
+付款后立即下载。自行部署大约 15–30 分钟：已安装 Docker 时演示大约 15 分钟；复制模板、改端口、换掉示例口令和域名大约 30 分钟。如果需要代为部署，定制服务为 1–2 个工作日。
+
+Download is instant after payment. Setup on your own machine is about 15–30 minutes. A custom setup service takes 1–2 business days.
 
 ### 环境要求
 
@@ -157,6 +172,7 @@ make demo
 - `04-app-stack` — nginx 反代 whoami，外加 Postgres 16
 - `CHANGELOG.md`
 - `marketing/` — 商品文案、`make_images.py`、`cover.png`、`thumb.png`
+- `GUMROAD_LISTING.md`
 - `.github/workflows/compose-config.yml`
 
 完整版：GUMROAD_URL
