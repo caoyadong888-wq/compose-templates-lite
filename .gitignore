@@ -1,0 +1,15 @@
+.env
+**/.env
+!**/.env.example
+certs/*.pem
+certs/*.cnf
+backups/*.dump
+backups/*.sql
+letsencrypt/live/
+letsencrypt/archive/
+letsencrypt/accounts/
+letsencrypt/renewal/
+__pycache__/
+*.pyc
+*.log
+tmp/
